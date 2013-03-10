@@ -14,8 +14,8 @@ function info (fn) {
   src = src.replace(stripcommentsandspaces, '')
   var sloc = matches(src, signewlines) + 1
 
-  var params = src.match(FN_ARGS)[1]
-  params = params ? params.split(FN_ARG_SPLIT) : [];
+  var params = src.match(FN_ARGS)
+  params = params && params[1] ? params[1].split(FN_ARG_SPLIT) : [];
   
   params.sloc = sloc
   params.loc = loc

@@ -39,4 +39,15 @@ assert.equal(cinfo[0], 'x')
 assert.equal(cinfo.sloc, 1)
 assert.equal(cinfo.loc, 1)
 
+
+// should handle overriden `toString`
+var d = function (a, b, c) {}
+d.toString = function () { return 'foo' }
+
+var dinfo = fninfo(d)
+
+assert.equal(dinfo.length, 0)
+assert.equal(dinfo.sloc, 1)
+assert.equal(dinfo.loc, 1)
+
 console.log('tests ok')
