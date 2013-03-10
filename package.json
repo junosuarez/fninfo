@@ -1,0 +1,24 @@
+{
+  "name": "fninfo",
+  "version": "1.0.0",
+  "description": "get basic info about a function",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jden/fninfo.git"
+  },
+  "keywords": [
+    "function",
+    "reflection",
+    "introspect"
+  ],
+  "author": "jden <jason@denizac.org>",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
