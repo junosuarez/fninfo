@@ -1,6 +1,6 @@
 {
   "name": "fninfo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "get basic info about a function",
   "main": "index.js",
   "directories": {
@@ -20,5 +20,9 @@
   ],
   "author": "jden <jason@denizac.org>",
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "chai": "~1.7.2",
+    "mocha": "~1.12.0"
+  }
 }
