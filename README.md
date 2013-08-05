@@ -6,23 +6,32 @@ get basic info about a function
     $ npm install fninfo
 
 ## usage
+```js
+var fninfo = require('fninfo')
 
-    var fninfo = require('fninfo')
+var a = function (foo, bar, baz) {/*
 
-    var a = function (foo, bar, baz) {/*
-      
-      */
+  */
 
-      // comment
-      baz = foo + bar
-      return baz
-    }
+  // comment
+  baz = foo + bar
+  return baz
+}
 
-    fninfo(a)
-    // => ['foo', 'bar', 'baz']
-    // other properties set on the returned array:
-    // .loc => 8
-    // .sloc => 4
+fninfo(a)
+// => {
+//      params: ['foo', 'bar', 'baz']
+//      loc: 8
+//      sloc: 4
+//    }
+```
+
+## running the tests
+
+From package root,
+
+`$ npm install`
+`$ npm test`
 
 ## license
 

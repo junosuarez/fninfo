@@ -17,10 +17,9 @@ describe('fninfo', function () {
 
     var ainfo = fninfo(a)
 
-    assert.equal(ainfo.length, 3)
-    assert.equal(ainfo[0], 'foo')
-    assert.equal(ainfo[1], 'bar')
-    assert.equal(ainfo[2], 'baz')
+    ainfo.params.length.should.equal(3)
+    ainfo.params.should.deep.equal(['foo','bar','baz'])
+
     assert.equal(ainfo.loc, 8)
     assert.equal(ainfo.sloc, 4)
 
@@ -33,7 +32,7 @@ describe('fninfo', function () {
 
     var binfo = fninfo(b)
 
-    assert.equal(binfo.length, 0)
+    assert.equal(binfo.params.length, 0)
     assert.equal(binfo.sloc, 3)
     assert.equal(binfo.loc, 3)
 
@@ -45,8 +44,8 @@ describe('fninfo', function () {
 
     var cinfo = fninfo(c)
 
-    assert.equal(cinfo.length, 1)
-    assert.equal(cinfo[0], 'x')
+    assert.equal(cinfo.params.length, 1)
+    assert.equal(cinfo.params[0], 'x')
     assert.equal(cinfo.sloc, 1)
     assert.equal(cinfo.loc, 1)
 
@@ -59,7 +58,7 @@ describe('fninfo', function () {
 
     var dinfo = fninfo(d)
 
-    assert.equal(dinfo.length, 0)
+    assert.equal(dinfo.params.length, 0)
     assert.equal(dinfo.sloc, 1)
     assert.equal(dinfo.loc, 1)
 
@@ -73,10 +72,8 @@ describe('fninfo', function () {
       d
     ){}
     var info = fninfo(fn)
-
-    info.length.should.equal(5)
-    // slice to get array
-    info.slice().should.deep.equal(['z','a','b','c','d'])
+    info.params.length.should.equal(5)
+    info.params.should.deep.equal(['z','a','b','c','d'])
   })
 
 })

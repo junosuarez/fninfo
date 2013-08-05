@@ -15,12 +15,16 @@ function info (fn) {
   var sloc = matches(src, signewlines) + 1
 
   var params = src.match(FN_ARGS)
-  params = params && params[1] ? params[1].trim().split(FN_ARG_SPLIT) : [];
+    params = params && params[1]
+      ? params[1].trim().split(FN_ARG_SPLIT)
+      : []
 
-  params.sloc = sloc
-  params.loc = loc
+  return {
+    params: params,
+    sloc: sloc,
+    loc: loc
+  }
 
-  return params
 }
 
 function matches(str, regex) {

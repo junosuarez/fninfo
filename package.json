@@ -1,13 +1,13 @@
 {
   "name": "fninfo",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "get basic info about a function",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "node test/test"
+    "test": "node node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
