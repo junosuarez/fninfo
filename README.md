@@ -9,7 +9,7 @@ get basic info about a function
 ```js
 var fninfo = require('fninfo')
 
-var a = function (foo, bar, baz) {/*
+var a = function aFunc (foo, bar, baz) {/*
 
   */
 
@@ -21,6 +21,7 @@ var a = function (foo, bar, baz) {/*
 fninfo(a)
 // => {
 //      params: ['foo', 'bar', 'baz']
+//      name: 'aFunc',
 //      loc: 8
 //      sloc: 4
 //    }

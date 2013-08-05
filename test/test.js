@@ -76,4 +76,10 @@ describe('fninfo', function () {
     info.params.should.deep.equal(['z','a','b','c','d'])
   })
 
+  it('passes through .name', function () {
+    fninfo(function foo () {
+
+    }).name.should.equal('foo')
+  })
+
 })

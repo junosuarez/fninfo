@@ -21,6 +21,7 @@ function info (fn) {
 
   return {
     params: params,
+    name: fn.name,
     sloc: sloc,
     loc: loc
   }
